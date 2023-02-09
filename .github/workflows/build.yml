@@ -1,7 +1,10 @@
 on:
-  watch:
-    types: started
-    push: master
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
   prepare_release:
     runs-on: ubuntu-20.04
